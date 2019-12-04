@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic</title>
+    {% load static %}
+    {% if my_experience.dark_theme %}
+        <link rel="stylesheet" type="text/css" href="{% static 'cutaway/style_dark.css' %}">
+    {% else %}
+        <link rel="stylesheet" type="text/css" href="{% static 'cutaway/style_light.css' %}">
+    {% endif %}
+</head>
+<body>
+
+<table frame="border" cellpadding="5" align="center">
+    <tr>
+        <td rowspan="2" cellpadding="25"><img src="{{ my_experience.my_photo.url }}" alt="Моё фото"/></td>
+        <td align="right"> ФИО: {{ my_experience.my_name }} </td>
+    </tr>
+    <tr>
+        <td align="right"> Дата рождения: {{ my_experience.date_birth }} </td>
+    </tr>
+    <tr>
+        <td> Мой возраст: {{ my_experience.my_age }}.</td>
+        <td align="right"> Мой класс: {{ my_experience.my_class }} </td>
+    </tr>
+    <tr>
+        <td> Язык программирования: {{ my_experience.language }}.</td>
+        <td align="right"> Мой опыт программирования: {{ my_experience.my_exp }}.</td>
+    </tr>
+    <tr>
+        <td colspan="3" height="2">
+
+        </td>
+    </tr>
+</table>
+
+<form action="{% url 'cutaway:add' %}" method="get" align="center" width="100">
+    <input type="submit" value="дополнительно">
+</form>
+</body>
+</html>

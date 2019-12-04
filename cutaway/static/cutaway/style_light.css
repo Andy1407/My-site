@@ -1,0 +1,37 @@
+
+body {
+    background: url("../image/background_light.jpg") center center / cover no-repeat fixed;
+}
+
+
+img {
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+
+table {
+    background: #ffffff;
+    border-radius: 20px;
+    float: inside;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+input {
+    border-radius: 20px;
+    background: #4799e3 !important;
+    border-color: #4799e3;
+    height: 24px;
+    width: 120px;
+    font-size: 12px;
+    color: #ffffff;
+    margin-top: 3px;
+}
+
+input:focus {
+    background: #ffffff !important;
+    color: #4799e3;
+    border-color: #ffffff;
+}
