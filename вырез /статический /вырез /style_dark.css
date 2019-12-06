@@ -34,5 +34,6 @@ input:focus {
     background: #ffffff;
     color: #4696df;
     border-color: #ffffff;
+    outline: none;
 
 }
