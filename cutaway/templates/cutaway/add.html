@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>additionally</title>
+    {% load static %}
+    {% if my_add.dark_theme %}
+        <link rel="stylesheet" type="text/css" href="{% static 'cutaway/style_dark.css' %}">
+    {% else %}
+        <link rel="stylesheet" type="text/css" href="{% static 'cutaway/style_light.css' %}">
+    {% endif %}
+</head>
+<body>
+<table frame="border">
+    <tr>
+        <td>
+            <h1 align="center">Дополнительно</h1>
+            <h3>{{ my_add.add }}</h3>
+
+        </td>
+    </tr>
+</table>
+<form action="{% url 'cutaway:basic' %}" method="get" align="left" frame="border">
+    <input type="submit" value="назад">
+</form>
+
+</body>
+</html>
