@@ -6,5 +6,4 @@ from . import views
 app_name = 'cutaway'
 urlpatterns = [
     path('', views.basic, name='basic'),
-    path('add/', views.add, name='add'),
 ] + static(settings.MEDIA_URL,  document_root=settings.MEDIA_ROOT)
