@@ -2,44 +2,59 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Basic</title>
+    <title>Основное</title>
     {% load static %}
-    {% if my_experience.dark_theme %}
-        <link rel="stylesheet" type="text/css" href="{% static 'cutaway/style_dark.css' %}">
-    {% else %}
-        <link rel="stylesheet" type="text/css" href="{% static 'cutaway/style_light.css' %}">
-    {% endif %}
-    <script type="text/javascript" src="../../javascript/cutaway/jquery.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="{% static 'cutaway/style.css' %}">
 
 </head>
 <body>
 
-<table frame="border" cellpadding="5" align="center">
-    <tr>
-        <td rowspan="2" cellpadding="25"><img src="{{ my_experience.my_photo.url }}" alt="Моё фото"/></td>
-        <td align="right"> ФИО: {{ my_experience.my_name }} </td>
-    </tr>
-    <tr>
-        <td align="right"> Дата рождения: {{ my_experience.date_birth }} </td>
-    </tr>
-    <tr>
-        <td> Мой возраст: {{ my_experience.my_age }}.</td>
-        <td align="right"> Мой класс: {{ my_experience.my_class }} </td>
-    </tr>
-    <tr>
-        <td> Язык программирования: {{ my_experience.language }}.</td>
-        <td align="right"> Мой опыт программирования: {{ my_experience.my_exp }}.</td>
-    </tr>
-    <tr>
-        <td colspan="3" height="2">
+<div id="head">
+    <div id="link">
+        <ul>
+            <li>
+                <a href="#content">Обо мне</a>
+            </li>
+            <li>
+                <a href="#project">Мои проекты</a>
+            </li>
+            <li>
+                <a href="#contact">Контакты</a>
+            </li>
+        </ul>
+    </div>
+    <h1 id="header">My Site</h1>
+</div>
+<div id="basic">
+    <img src="../../static/image/My_photo.png" alt="Моё фото"/>
+</div>
+<div id="hr"></div>
+<div id="content">
+    <p>
+    <h3>Меня зовут {{ basic.my_name }} и мне {{ basic.my_age }} лет.
+        Я учусь в {{ basic.my_class }} классе. Также я учу {{ basic.language }} {{ basic.my_exp }} года.</h3>
+</div>
+<p>
+<h3>{{ basic.add }}</h3></p>
+</div>
+<div id="hr"></div>
+<div id="all-project">
+    <h2>Мои проекты</h2>
 
-        </td>
-    </tr>
-</table>
+    <div id="project">
+        <img src="../../static/image/Project.png" alt="my_project" align="center"/>
+        <img src="../../static/image/Project.png" alt="my_project" align="center"/>
+        <img src="../../static/image/Project.png" alt="my_project" align="center"/>
+    </div>
+</div>
+<div id="hr"></div>
 
-<form action="{% url 'cutaway:add' %}" method="get" align="center" width="100">
-    <input type="submit" value="дополнительно" id="input">
-</form>
+<div id="all-contacts">
+    <h2>Контакты</h2>
+    <div id="contacts">
+        <p>E: And.malinkin@gmail.com</p>
+        <p>T: +7 985 897 07 18</p>
+    </div>
+</div>
 </body>
 </html>
