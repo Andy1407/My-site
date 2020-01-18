@@ -122,3 +122,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/images/'
+
+import django_heroku
+django_heroku.settings(locals())
