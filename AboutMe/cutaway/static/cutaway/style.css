@@ -1,0 +1,90 @@
+body {
+    background: #ffffff;
+}
+
+img {
+    width: 400px;
+    vertical-align: bottom;
+
+}
+
+#head {
+    background: #4799e3;
+    height: 100px;
+}
+
+#head #link {
+    float: left;
+}
+
+#head #link ul {
+    list-style-type: none;
+}
+
+#head ul li a {
+    float: left;
+    font: bold 13px Helvetica, sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+#header {
+    padding: 5px;
+    float: right;
+    color: #ffffff;
+}
+
+#hr {
+    border: 0;
+    height: 3px;
+    background-color: #4799e3;
+    width: 100%;
+    margin: 0 auto 25px auto;
+}
+
+#content {
+    color: #000000;
+    vertical-align: top;
+}
+
+#all-project {
+    width: 969px;
+    margin: 0 auto;
+}
+
+#all-project h2 {
+    margin: 0 auto;
+    font: italic normal 31px Times, serif;
+}
+
+#project {
+    padding-top: 30px;
+    border-top: 1px solid #313131;
+
+}
+
+#project img {
+    width: 320px;
+    height: 180px;
+    display: inline;
+    margin: 5px auto;
+
+
+}
+
+#all-contacts {
+    width: 969px;
+    margin: 0 auto;
+}
+
+#all-contacts h2 {
+    margin: 0 auto;
+    font: italic normal 31px Times, serif;
+}
+
+#contacts {
+    border-top: 1px solid #313131;
+
+}
+
